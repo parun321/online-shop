@@ -1,0 +1,130 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#f97316;
+  --muted:#94a3b8;
+  --glass: rgba(255,255,255,0.03);
+}
+
+*{box-sizing:border-box}
+html,body{
+  height:100%;
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,'Hiragino Kaku Gothic ProN',Meiryo,sans-serif;
+  background:linear-gradient(180deg,#071022,var(--bg));
+  color:#e6eef8;
+}
+
+.container{max-width:1100px;margin:0 auto;padding:24px;}
+
+.site-header{
+  backdrop-filter:blur(6px);
+  position:sticky;
+  top:0;
+  background:linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.15));
+  border-bottom:1px solid rgba(255,255,255,0.03);
+}
+.site-header .container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo{
+  font-weight:800;
+  letter-spacing:1px;
+  text-decoration:none;
+  color:var(--accent);
+  font-size:1.1rem;
+}
+.nav a{
+  margin-left:18px;
+  text-decoration:none;
+  color:var(--muted);
+  font-size:0.95rem;
+}
+
+.hero{
+  padding:80px 0;
+  text-align:left;
+}
+.hero h1{
+  font-size:2rem;
+  margin:0 0 12px;
+  line-height:1.05;
+  color:#fff;
+}
+.hero p{
+  margin:0 0 18px;
+  color:var(--muted);
+  max-width:60%;
+}
+
+.btn{
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:10px;
+  background:linear-gradient(90deg,var(--accent),#fb923c);
+  text-decoration:none;
+  color:#071022;
+  font-weight:700;
+}
+
+.info{padding:36px 0;}
+.items-grid{padding:24px 0;}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+}
+.card{
+  background:var(--glass);
+  padding:16px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.03);
+}
+
+.thumb {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.2));
+  margin-bottom: 10px;
+}
+.thumb img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.small-btn{
+  display:inline-block;
+  margin-top:8px;
+  padding:6px 10px;
+  border-radius:8px;
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.04);
+  text-decoration:none;
+  color:var(--muted);
+  font-size:0.9rem;
+}
+
+.contact{
+  padding:24px 0;
+  border-top:1px dashed rgba(255,255,255,0.02);
+}
+.site-footer{
+  padding:18px 0;
+  color:var(--muted);
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,0.02);
+  font-size:0.9rem;
+}
+
+@media (max-width:720px){
+  .hero p{max-width:100%;}
+  .site-header .container{padding:8px 16px;}
+  .logo{font-size:1rem;}
+}

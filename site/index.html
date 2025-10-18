@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HIROMU SHOP</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+  if (sessionStorage.getItem("auth") !== "ok") {
+    window.location.href = "login.html";
+  }
+</script>
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="#">HIROMU SHOP</a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#items">Items</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>オンラインショッピング</h1>
+        <p>ハンバーガーはうまいぞぉ</p>
+        <a class="btn" href="#items">商品を見る</a>
+      </div>
+    </section>
+
+    <section id="about" class="container info">
+      <h2>About</h2>
+      <p>HIROMU SHOP は、最高のハンバーガーとポテトとドリンクをお届けします。</p>
+    </section>
+
+    <section id="items" class="container items-grid">
+      <h2>Items</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="thumb">
+            <img src="./images/hamburger.png" alt="ハンバーガー">
+          </div>
+          <h3>ハンバーガー</h3>
+          <p>ジューシーなハンバーガー。自慢の一品！</p>
+          <a class="small-btn" href="./images/hamburger.png">詳細</a>
+        </article>
+
+        <article class="card">
+          <div class="thumb">
+            <img src="./images/potato.png" alt="ポテト">
+          </div>
+          <h3>ポテト</h3>
+          <p>サクサクのポテト。セットでどうぞ。</p>
+          <a class="small-btn" href="./images/potato.png">詳細</a>
+        </article>
+
+        <article class="card">
+          <div class="thumb">
+            <img src="./images/drink.png" alt="ドリンク">
+          </div>
+          <h3>コーラ</h3>
+          <p>キンキンに冷えたコーラ！</p>
+          <a class="small-btn" href="./images/drink.png">詳細</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>Contact</h2>
+      <p>お問い合わせメール: <a href="うんち">うんち</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 2025 HIROMU SHOP</small>
+    </div>
+  </footer>
+</body>
+</html>

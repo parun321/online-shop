@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>ログイン</title>
+  <style>
+    body {
+      background: #0f172a; color: white;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      height: 100vh; font-family: sans-serif;
+    }
+    input, button { padding: 10px; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>HIROMU SHOP</h1>
+  <p>パスワードを入力してください</p>
+  <input type="password" id="pw" placeholder="Password">
+  <button onclick="checkPW()">ログイン</button>
+  <p id="msg"></p>
+  <script>
+    function checkPW() {
+      const pw = document.getElementById("pw").value;
+      
+      if (pw === "hiromu2010") {
+        sessionStorage.setItem("auth", "ok");
+        window.location.href = "index.html";
+      } else {
+        document.getElementById("msg").textContent = "パスワードが違います。";
+      }
+    }
+  </script>
+</body>
+</html>
